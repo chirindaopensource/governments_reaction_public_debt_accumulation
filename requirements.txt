@@ -1,0 +1,98 @@
+﻿# =============================================================================
+# Requirements File for Fiscal Credibility Score Implementation
+# =============================================================================
+# Professional-grade dependencies for econometric analysis of sovereign
+# fiscal reaction functions and cross-country panel data modeling.
+#
+# This requirements file supports the complete implementation of:
+# - Dynamic Common Correlated Effects Mean Group (DCCEMG) estimation
+# - Panel unit root testing (CIPS framework)
+# - Cross-sectional dependence diagnostics (Pesaran CD)
+# - Slope heterogeneity testing (Blomquist-Westerlund)
+# - HP filtering and macroeconomic data preprocessing
+# - Publication-quality visualization and reporting
+#
+# Author: CS Chirinda
+# Date: 18 July 2025
+# Version: 1.0.0
+# =============================================================================
+
+# Core Scientific Computing Stack
+# =============================================================================
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0,<3.0.0
+scipy>=1.10.0,<2.0.0
+
+# Statistical and Econometric Modeling
+# =============================================================================
+# Core econometrics framework
+statsmodels>=0.14.0,<1.0.0
+
+# Panel data econometrics - linearmodels provides PanelOLS, PanelAR
+# Critical for DCCEMG implementation and panel diagnostics
+linearmodels>=5.0.0,<6.0.0
+
+# Time series analysis extensions
+arch>=6.0.0,<7.0.0
+
+# Visualization and Plotting
+# =============================================================================
+matplotlib>=3.7.0,<4.0.0
+seaborn>=0.12.0,<1.0.0
+
+# Optional but Recommended Dependencies
+# =============================================================================
+# Enhanced numerical performance
+numba>=0.57.0,<1.0.0
+
+# Data validation and type checking
+pydantic>=2.0.0,<3.0.0
+
+# Progress bars for long-running computations
+tqdm>=4.65.0,<5.0.0
+
+# Excel file I/O for institutional data sources
+openpyxl>=3.1.0,<4.0.0
+xlrd>=2.0.0,<3.0.0
+
+# Web data acquisition (IMF, OECD, World Bank APIs)
+requests>=2.31.0,<3.0.0
+urllib3>=2.0.0,<3.0.0
+
+# Date/time handling for panel data
+python-dateutil>=2.8.0,<3.0.0
+
+# Memory-efficient data storage
+tables>=3.8.0,<4.0.0
+h5py>=3.8.0,<4.0.0
+
+# Development and Quality Assurance
+# =============================================================================
+# Code formatting and linting
+black>=23.0.0,<24.0.0
+flake8>=6.0.0,<7.0.0
+mypy>=1.4.0,<2.0.0
+
+# Testing framework
+pytest>=7.4.0,<8.0.0
+pytest-cov>=4.1.0,<5.0.0
+
+# Documentation generation
+sphinx>=7.0.0,<8.0.0
+sphinx-rtd-theme>=1.3.0,<2.0.0
+
+# =============================================================================
+# Version Constraints Rationale
+# =============================================================================
+#
+# numpy>=1.24.0: Required for enhanced array API and performance improvements
+# pandas>=2.0.0: Necessary for improved nullable dtypes and performance
+# scipy>=1.10.0: Contains critical statistical distributions and optimization
+# statsmodels>=0.14.0: Latest panel diagnostics and time series functionality
+# linearmodels>=5.0.0: Core panel econometrics, including PanelOLS/PanelAR
+# matplotlib>=3.7.0: Enhanced subplot functionality and performance
+# seaborn>=0.12.0: Modern statistical visualization capabilities
+#
+# Upper bounds prevent breaking changes in major version updates while
+# allowing patch and minor version improvements for bug fixes and features.
+# =============================================================================
